@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    background-image: url(../images/living-room.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(192, 186, 186);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.toph1{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 8px;
+    color: rgb(47, 46, 46);
+    font-family: 'Courier New', Courier, monospace;
+}
+.menu{
+    margin-left: 30px;
+}
+.btnSection{
+   margin-left: 43px;
+}
+
+p{
+    text-align: center;
+    font-size: 40px;
+    color:rgb(42, 41, 38) ;
+    
+}
+.btn{
+    font-size: 25px;
+    color: rgba(17, 19, 19, 0.736);
+    background-color: rgb(236, 208, 174);
+    margin-left: 13px;
+    float: left;
+    border-radius: 8px;
+}
+.section{
+    margin-top: 70px;
+    margin-left: 126px;
+    border-style: solid;
+    padding: 15px;
+    border-color: rgb(103, 97, 97);
+    border-radius: 15px;
+    margin-right: 1120px;
+}
+.text{
+    font-size: 25px;
+    color: rgb(55, 55, 59);
+    padding: 3px;
+}
+
+.puppy{
+    width: 100px;
+    display: inline-flex;
+    
+}
+img{
+    height: 110px;
+    float: left;
+    position: relative;
+    margin-left: 650%;
+    margin-top: 220px;
+    animation: spinner 4s;
+    animation-iteration-count: initial;
+}
+
+@keyframes spinner{
+      from {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform:  rotate(-45deg);
+      }
+      to{
+        transform: rotate(360deg);
+      }
+}
