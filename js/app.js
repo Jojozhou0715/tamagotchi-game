@@ -38,6 +38,8 @@ function feedPet(){
     document.body.style.backgroundImage = "url(./images/living-room.png)"
     document.querySelector('#petpic').src = './images/dog (1).png'
     document.querySelector('#petpic').classList.add('pet')
+    // document.querySelector('#petpic').classList.remove('pet')
+  
 }
 
 
@@ -48,33 +50,33 @@ feedBtn.addEventListener('click', feedPet)
 const increaseAge = document.querySelector('#age')
 function ageup(){
     increaseAge.innerHTML = tamagotchi.age ++
-    // showage()
-    if(tamagotchi.age <= 3){
+    showage()
+    if(tamagotchi.age <= 4){
         document.querySelector('#petpic').src = "./images/puppy.png"
-    }else if(tamagotchi.age > 3 && tamagotchi.age <= 6){
+    }else if(tamagotchi.age >= 5 && tamagotchi.age <= 10){
        document.querySelector('#petpic').src = './images/teendog.png'
     }
-    else if(tamagotchi.age > 6 && tamagotchi.age <= 10 ){
+    else if(tamagotchi.age >= 11 ){
         document.querySelector('#petpic').src = './images/youngdog.png'
         // alert('your dog is older')
-    }else if (tamagotchi.age > 10 && tamagotchi.age <= 15){
-        document.querySelector('#petpic').src = './images/olddog.png'
+    // }else if (tamagotchi.age > 10 && tamagotchi.age <= 15){
+        // document.querySelector('#petpic').src = './images/olddog.png'
     
     }
    
 }
 const stopage = setInterval(ageup, 5000)
 
-// function showage(){
-//     if(tamagotchi.age === 6){
-//         alert('your pet is getting older')
-// }else if(tamagotchi.age === 10){
-//     alert('older')
-// }else if(tamagotchi.age === 15){
-//     alert('so old')
-// }
-// }
-// showage()
+function showage(){
+    if(tamagotchi.age === 6){
+        alert('Your pet has a new form at age 4!')
+}else if(tamagotchi.age === 11){
+    alert('Your pet has another new form at age 10!')
+}else if(tamagotchi.age === 15){
+    alert('Your pet is getting old, take good care of your pet!')
+}
+}
+showage()
 
 //create a function to sleep 
 const sleeping = document.querySelector('#sleep')
