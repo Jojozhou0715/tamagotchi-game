@@ -44,8 +44,8 @@ p{
     border-color: rgb(103, 97, 97);
     border-radius: 15px;
     margin-right: 1120px;
-    ;
-}
+
+} 
 .text{
     font-size: 25px;
     color: rgb(55, 55, 59);
@@ -63,10 +63,14 @@ img{
     position: relative;
     margin-left: 650%;
     margin-top: 200px;
+    /* animation: spinner 4s;
+    animation-iteration-count: infinite;
+    animation-direction:; */
+    
+}
+.pet{
     animation: spinner 4s;
     animation-iteration-count: infinite;
-    /* animation-direction:; */
-    
 }
 
 @keyframes spinner{
