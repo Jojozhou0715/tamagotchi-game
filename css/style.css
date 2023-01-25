@@ -23,9 +23,9 @@ body{
 }
 
 p{
-    text-align: center;
     font-size: 40px;
     color:rgb(42, 41, 38) ;
+    margin-left: 550px;
     
 }
 .btn{
@@ -37,13 +37,14 @@ p{
     border-radius: 8px;
 }
 .section{
-    margin-top: 70px;
+    margin-top: 58px;
     margin-left: 126px;
     border-style: solid;
     padding: 15px;
     border-color: rgb(103, 97, 97);
     border-radius: 15px;
     margin-right: 1120px;
+    ;
 }
 .text{
     font-size: 25px;
@@ -51,7 +52,7 @@ p{
     padding: 3px;
 }
 
-.puppy{
+#puppy{
     width: 100px;
     display: inline-flex;
     
@@ -61,14 +62,16 @@ img{
     float: left;
     position: relative;
     margin-left: 650%;
-    margin-top: 220px;
+    margin-top: 200px;
     animation: spinner 4s;
-    animation-iteration-count: initial;
+    animation-iteration-count: infinite;
+    /* animation-direction:; */
+    
 }
 
 @keyframes spinner{
       from {
-        transform: rotate(0deg);
+        transform: rotate(0deg);   
       }
       25% {
         transform:  rotate(-45deg);
@@ -76,4 +79,7 @@ img{
       to{
         transform: rotate(360deg);
       }
+      0%   {left:0px; top:0px;}
+      25%  {left:200px; top:0px;}
+      100% {left:0px; top:0px;}
 }

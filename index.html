@@ -12,29 +12,29 @@
     
     
     <div class="btnSection">
-        <button class="btn startbtn">Start</button>
-        <button class="btn feedbtn">Feed</button>
-        <button class="btn sleepbtn">Sleep</button>
-        <button class="btn playbtn">Play</button>
-        </div><br>
-        <p><span id="name"><strong></strong></span></p>
+        <button class="btn" id="startbtn">Start</button>
+        <button class="btn" id="feedbtn">Feed</button>
+        <button class="btn" id="sleepbtn">Sleep</button>
+        <button class="btn" id="playbtn">Play</button>
+        </div>
+        <p><span id="name"><strong>Enter your pet's name</strong></span></p>
         
         <section class="section">
             <div class="fd text">
-                Hunger: <span class="feed"></span>
+                Hunger: <span id="feed">10</span>
             </div>
             <div class="sp text">
-                Sleepness: <span class="sleep"></span>
+                Sleepness: <span id="sleep">10</span>
             </div>
             <div class="py text">
-                Bordom: <span class="play"></span>
+                Bordom: <span id="play">10</span>
             </div>
             <div class="year text">
-                Age: <span class="age"></span>
+                Age: <span id="age">0</span>
             </div>
         </section>
-    <div class="puppy">
-        <img src="./images/icons8-puppy-64.png">
+    <div id="puppy">
+        <img id="petpic" src="./images/puppy.png">
     </div>
     
     <script type="text/javascript" src="js/app.js"></script>
