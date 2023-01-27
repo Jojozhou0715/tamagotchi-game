@@ -20,11 +20,15 @@ const tamagotchi = new game()
 
 //create a function to click the start button
 function startGame(e){
-    e.preventDefault()
+    e.preventDefault() 
     tamagotchi.hunger = 10
     tamagotchi.sleepiness = 10
     tamagotchi.boredom = 10  
     tamagotchi.age = 0
+    const hungerInterval = setInterval(decreasehunger, 3000);
+    const sleepInterval = setInterval(decreasesleep, 3000);
+    const playInterval = setInterval(decreaseplay, 3000);
+    const stopage = setInterval(ageup, 5000)
     alert('Welcome to my Tamagotchi Game!')
     let tamagotchiName = prompt("What is your pet's name?")
     document.querySelector("#name").innerHTML = tamagotchiName
@@ -53,6 +57,7 @@ feedBtn.addEventListener('click', feedPet)
 //create a function to get age up
 const increaseAge = document.querySelector('#age')
 function ageup(){
+   
     increaseAge.innerHTML = tamagotchi.age ++
     showage()
     if(tamagotchi.age <= 4){
@@ -65,7 +70,7 @@ function ageup(){
    
     } 
 }
-const stopage = setInterval(ageup, 5000)
+// const stopage = setInterval(ageup, 5000)
 
 //a function to alert ages
 function showage(){
@@ -105,8 +110,9 @@ playBtn.addEventListener('click', playfun)
 
 //decrease hunger function
 // const hungery = document.querySelector('#feed')
-const hungerInterval = setInterval(decreasehunger, 3000);
+// const hungerInterval = setInterval(decreasehunger, 3000);
 function decreasehunger(){
+    
      if(tamagotchi.hunger >= 0){
         hungery.innerHTML = tamagotchi.hunger --
     }else if(tamagotchi.hunger <= 0){   
@@ -114,10 +120,11 @@ function decreasehunger(){
         endgame()   
 }}
 
-const sleepInterval = setInterval(decreasesleep, 3000);
+// const sleepInterval = setInterval(decreasesleep, 3000);
 const sleepy = document.querySelector('#sleep')
 
 function decreasesleep(){
+
      if(tamagotchi.sleepiness >= 0){
         sleepy.innerHTML = tamagotchi.sleepiness --
     }else if(tamagotchi.sleepiness <= 0){
@@ -126,10 +133,11 @@ function decreasesleep(){
     }
 }
 
-const playInterval = setInterval(decreaseplay, 3000);
+// const playInterval = setInterval(decreaseplay, 3000);
 const playtime = document.querySelector('#play')
 
 function decreaseplay(){ 
+   
      if(tamagotchi.boredom >= 0){
         playtime.innerHTML = tamagotchi.boredom --
     }else if(tamagotchi.boredom <= 0) {
